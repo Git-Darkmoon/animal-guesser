@@ -8,7 +8,7 @@ app = FastAPI(title="Animal Guesser")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://animal-guesser.onrender.com"],
+    allow_origins=["http://localhost:5173", "https://animal-guesser-fawn.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

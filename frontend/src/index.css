@@ -1,0 +1,89 @@
+:root {
+  --linen: #f2efe9;
+  --pearl: #e8e4dc;
+  --pearl-deep: #dcd6c9;
+  --navy: #1f3a5f;
+  --navy-deep: #12253f;
+  --ink: #22252b;
+  --ink-soft: #5b5f66;
+  --hairline: #d6cfc2;
+  --cream-white: #faf8f4;
+
+  --shadow-card:
+    rgba(18, 37, 63, 0.14) 0 20px 40px -12px,
+    rgba(18, 37, 63, 0.08) 0 8px 16px -8px;
+
+  --display: "Fraunces", "Iowan Old Style", serif;
+  --sans: "Work Sans", system-ui, "Segoe UI", sans-serif;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--linen);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--linen);
+  background-image:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(31, 58, 95, 0.07),
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 90%, rgba(18, 37, 63, 0.06), transparent 50%);
+  min-height: 100svh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
